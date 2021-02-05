@@ -17,8 +17,14 @@ sudo curl -fsSL https://raw.githubusercontent.com/skywalka/check-cpu-perf/master
 
 sudo chmod +x /usr/lib64/nagios/plugins/check_cpu_perf
 
+
+sudo curl -fsSL https://raw.githubusercontent.com/mayeco/nrpe/master/checks/check_file_size \
+  -o /usr/lib64/nagios/plugins/check_file_size
+
+sudo chmod +x /usr/lib64/nagios/plugins/check_file_size
+
 sudo curl -fsSL https://raw.githubusercontent.com/mayeco/nrpe/master/nrpe.cfg -o /etc/nagios/nrpe.cfg
 
 sudo systemctl enable nrpe --now
 
-sudo systemctl start nrpe
+sudo systemctl restart nrpe

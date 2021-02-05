@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# File to consider
+FILENAME=$1
+
+# MAXSIZE
+MAXSIZE=$2
+
+# Get file size
+FILESIZE=$(stat -c%s "$FILENAME")
+
+data="TOTAL=$FILESIZE;;;"
+
+if (( FILESIZE > MAXSIZE)); then
+    echo "FILE SIZE CRITICAL - Total: $FILESIZE bytes size!|$data"
+    exit 2
+else
+    echo "FILE SIZE OK - Total: $FILESIZE bytes size!|$data"
+    exit 0
+fi
