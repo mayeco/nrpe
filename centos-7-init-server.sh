@@ -11,9 +11,9 @@ sudo curl -fsSL https://raw.githubusercontent.com/whereisaaron/linux-check-mem-n
   -o /usr/lib64/nagios/plugins/check_mem
 sudo chmod +x /usr/lib64/nagios/plugins/check_mem
 
-sudo curl -fsSL https://raw.githubusercontent.com/skywalka/check-cpu-perf/master/check_cpu_perf.sh \
-  -o /usr/lib64/nagios/plugins/check_cpu_perf
-sudo chmod +x /usr/lib64/nagios/plugins/check_cpu_perf
+sudo curl -fsSL https://raw.githubusercontent.com/sokecillo/nagios-check_cpu/master/check_cpu.sh \
+  -o /usr/lib64/nagios/plugins/check_cpu
+sudo chmod +x /usr/lib64/nagios/plugins/check_cpu
 
 sudo curl -fsSL https://raw.githubusercontent.com/mayeco/nrpe/master/checks/check_file_size \
   -o /usr/lib64/nagios/plugins/check_file_size
