@@ -5,7 +5,7 @@ sudo yum remove -y epel-release nrpe nagios-plugins nagios-plugins-all || true
 
 sudo rpm -Uvh http://mirror.math.princeton.edu/pub/epel/7/x86_64/Packages/e/epel-release-7-13.noarch.rpm
 
-sudo yum --enablerepo=epel -y install nrpe nagios-plugins nagios-plugins-all
+sudo yum --enablerepo=epel -y install nrpe nagios-plugins nagios-plugins-all coreutils curl grep jq sed
 
 sudo curl -fsSL https://raw.githubusercontent.com/whereisaaron/linux-check-mem-nagios-plugin/master/check_mem \
   -o /usr/lib64/nagios/plugins/check_mem
